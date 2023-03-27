@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Esta es mi propia pagina web</title>
+        <meta charset="UFT-8">
+        <meta name="Descripcion" content="sta página calculará dos numeros que ingreses e identificará si son amigos o no">
+    </head> 
+    <body>
+        <h1>Ejercicio de los numeros amigos</h1>
+        <p> Aqui podras encontrar la Informacion que desees</p>   
+        
+            <input type="button" value="Calcular" onclick="calcular()">
+            <script>
+                function calcular(){
+                   var num1, num2, respuesta, suma1 = 0, suma2 = 0;
+                   num1 = prompt("Ingrese el primer numero");
+                   num2 = prompt("Ingrese el segundo numero");
+                   for(var i = 1; i < num1; i++){
+                    if(num1 % i == 0){
+                        suma1 += i;
+                    }
+                   }
+                   for(var j = 1; j < num2; j++){
+                    if(num2 % j == 0){
+                        suma2 += j;
+                    }
+                   }
+
+                   if(suma1 == num2 && suma2 == num1){
+                       document.write("Los numeros ingresados SON AMIGOS");
+                   }else{
+                       document.write("Los numeros ingresados NO SON AMIGOS " + suma2);
+                   }
+                }
+             
+            </script>
+      
+    </body>
+</html>
